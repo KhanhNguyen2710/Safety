@@ -1,0 +1,50 @@
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    // width: 100%;
+    padding: 10px 10%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    // background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99999;
+    // box-sizing: border-box;
+
+
+    a {
+        font-size: 34px;
+        // color: white;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .navbar {
+        a {
+            // position: relative;
+            // font-size: 18px;
+            // color: white;
+            // font-weight: 500;
+            margin-left: 40px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: rgb(0, 0, 0);
+                transition: 0.3s;
+            }
+            &:hover::before {
+                width: 100%;
+            }
+        }
+    }
+}
